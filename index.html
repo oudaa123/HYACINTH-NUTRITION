@@ -96,7 +96,6 @@
     color: green;
   }
 
-  /* تحسين إضافي للموبايل */
   @media screen and (max-width: 480px) {
     header h1 { font-size: 1.6em; }
     header h2 { font-size: 1em; }
@@ -128,7 +127,7 @@
 
 <form id="regForm">
   <input type="text" id="name" placeholder="الاسم بالكامل" required>
-  <input type="text" id="contact" placeholder="رقم التواصل" required>
+  <input type="text" id="contact" placeholder="رقم التواصل" required pattern="\d+" title="الرجاء إدخال أرقام فقط">
   <select id="condition" required>
     <option value="">اختر حالتك</option>
     <option value="تخسيس">تخسيس</option>
@@ -199,11 +198,16 @@ const msgEl = document.getElementById("message");
 
 form.addEventListener("submit", e => {
   e.preventDefault();
-  msgEl.textContent = "تم التأكيد الحجز العياده سوف تتواصل معك ✅";
+
+  const contactInput = document.getElementById("contact").value.trim();
+  if(!/^\d+$/.test(contactInput)) {
+    msgEl.textContent = "❌ رقم التواصل يجب أن يكون أرقام فقط";
+    return;
+  }
 
   const data = {
-    name: document.getElementById("name").value,
-    contact: document.getElementById("contact").value,
+    name: document.getElementById("name").value.trim(),
+    contact: contactInput,
     condition: document.getElementById("condition").value
   };
 
@@ -213,7 +217,12 @@ form.addEventListener("submit", e => {
   })
   .then(res => res.json())
   .then(resp => {
-    if(resp.status === "ok") form.reset();
+    if(resp.status === "ok") {
+      form.reset();
+      msgEl.textContent = "✅ تم التأكيد الحجز العياده سوف تتواصل معك";
+    } else if(resp.status === "duplicate") {
+      msgEl.textContent = "❌ هذا الرقم تم تسجيله بالفعل اليوم";
+    }
   })
   .catch(err => {
     console.error(err);
@@ -224,5 +233,3 @@ form.addEventListener("submit", e => {
 
 </body>
 </html>
-
-
