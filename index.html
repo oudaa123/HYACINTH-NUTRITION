@@ -5,105 +5,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HYACINTH NUTRITION - الدكتورة فاطمة محمد</title>
 <style>
-  body {
-    font-family: Tahoma, sans-serif;
-    background-color: #f9f9f9;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-  }
-  header {
-    background-color: #8a2be2;
-    color: white;
-    padding: 25px 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  header img {
-    width: 80px;
-    height: auto;
-    margin-bottom: 10px;
-  }
-  header h1 {
-    font-size: 2em;
-    margin: 0;
-  }
-  header h2 {
-    margin:5px 0 0 0; 
-    font-size:1.2em; 
-    font-weight:normal;
-  }
-  .service-btn {
-    background-color: #ffffff;
-    color: #8a2be2;
-    border: none;
-    padding: 15px 20px;
-    margin: 8px;
-    font-size: 1em;
-    cursor: pointer;
-    border-radius: 12px;
-    transition: 0.3s;
-    font-weight: bold;
-  }
-  .service-btn:hover {
-    background-color: #e0d4f7;
-  }
-  #service-details {
-    text-align: right;
-    max-width: 90%;
-    margin: 15px auto;
-    background: #fff;
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0 0 8px rgba(0,0,0,0.1);
-  }
-  form {
-    max-width: 90%;
-    margin: 15px auto;
-    background: #fff;
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0 0 8px rgba(0,0,0,0.1);
-    text-align: right;
-  }
-  form input, form select {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 0.95em;
-  }
-  form button {
-    width: 48%;
-    padding: 12px;
-    margin: 4px 1%;
-    font-size: 1em;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    color: white;
-    font-weight: bold;
-  }
-  #submit-btn { background-color: #8a2be2; }
-  #fb-btn { background-color: #3b5998; }
-  #submit-btn:hover { background-color: #6a1fbf; }
-  #fb-btn:hover { background-color: #2d4373; }
-  #message {
-    margin-top: 10px;
-    font-weight: bold;
-    color: green;
-  }
-
-  @media screen and (max-width: 480px) {
-    header h1 { font-size: 1.6em; }
-    header h2 { font-size: 1em; }
-    .service-btn { font-size: 0.95em; padding: 12px 16px; }
-    form input, form select { font-size: 0.9em; padding: 8px; }
-    form button { font-size: 0.95em; padding: 10px; }
-    #service-details { padding: 12px; border-radius: 10px; }
-    form { padding: 12px; border-radius: 10px; }
+  body { font-family: Tahoma, sans-serif; background-color: #f9f9f9; text-align: center; margin:0; padding:0; }
+  header { background-color: #8a2be2; color:white; padding:25px 10px; display:flex; flex-direction:column; align-items:center; }
+  header img { width:80px; height:auto; margin-bottom:10px; }
+  header h1 { font-size:2em; margin:0; }
+  header h2 { margin:5px 0 0 0; font-size:1.2em; font-weight:normal; }
+  .service-btn { background-color:#fff; color:#8a2be2; border:none; padding:15px 20px; margin:8px; font-size:1em; cursor:pointer; border-radius:12px; transition:0.3s; font-weight:bold; }
+  .service-btn:hover { background-color:#e0d4f7; }
+  #service-details { text-align:right; max-width:90%; margin:15px auto; background:#fff; padding:15px; border-radius:12px; box-shadow:0 0 8px rgba(0,0,0,0.1); }
+  form { max-width:90%; margin:15px auto; background:#fff; padding:15px; border-radius:12px; box-shadow:0 0 8px rgba(0,0,0,0.1); text-align:right; }
+  form input, form select { width:100%; padding:10px; margin:8px 0; border-radius:8px; border:1px solid #ccc; font-size:0.95em; }
+  form button { width:48%; padding:12px; margin:4px 1%; font-size:1em; border:none; border-radius:10px; cursor:pointer; color:white; font-weight:bold; }
+  #submit-btn { background-color:#8a2be2; }
+  #fb-btn { background-color:#3b5998; }
+  #submit-btn:hover { background-color:#6a1fbf; }
+  #fb-btn:hover { background-color:#2d4373; }
+  #message { margin-top:10px; font-weight:bold; color:green; }
+  @media screen and (max-width:480px){
+    header h1 { font-size:1.6em; }
+    header h2 { font-size:1em; }
+    .service-btn { font-size:0.95em; padding:12px 16px; }
+    form input, form select { font-size:0.9em; padding:8px; }
+    form button { font-size:0.95em; padding:10px; }
+    #service-details { padding:12px; border-radius:10px; }
+    form { padding:12px; border-radius:10px; }
   }
 </style>
 </head>
@@ -121,9 +46,7 @@
   </div>
 </header>
 
-<div id="service-details">
-  <p>اختر الخدمة لمعرفة التفاصيل.</p>
-</div>
+<div id="service-details"><p>اختر الخدمة لمعرفة التفاصيل.</p></div>
 
 <form id="regForm">
   <input type="text" id="name" placeholder="الاسم بالكامل" required>
@@ -137,7 +60,7 @@
   </select>
   <div>
     <button type="submit" id="submit-btn">احجز الان وتابع حالتك أونلاين</button>
-    <button type="button" id="fb-btn" onclick="window.open('https://www.facebook.com/share/166UYn5Cwd/?mibextid=wwXIfr', '_blank')">تواصل مع الدكتورة فاطمة</button>
+    <button type="button" id="fb-btn" onclick="window.open('https://www.facebook.com/share/166UYn5Cwd/?mibextid=wwXIfr','_blank')">تواصل مع الدكتورة فاطمة</button>
   </div>
   <div id="message"></div>
 </form>
@@ -146,43 +69,10 @@
 const SERVER_URL = "https://script.google.com/macros/s/AKfycbzBv4vXuM5vgtY-T3gEKL9Y_hJ-V7Avpyl6pTx6tU0cf-C7VUWd1RL9jJjN6sCHm2dI-Q/exec";
 
 const details = {
-  "تخسيس": `
-    <h3>تخسيس / إنقاص وزن</h3>
-    <ul>
-      <li>تحليل الوزن الحالي ونسبة الدهون في الجسم.</li>
-      <li>حساب السعرات الحرارية المطلوبة يوميًا.</li>
-      <li>وضع خطة غذائية مفصلة بالأيام والوجبات.</li>
-      <li>متابعة أسبوعية للوزن والقياسات وتعديل النظام إذا لزم.</li>
-      <li>نصائح رياضية وخطوات لتحسين النشاط البدني.</li>
-    </ul>
-  `,
-  "كبد": `
-    <h3>كبد / صحة الكبد</h3>
-    <ul>
-      <li>تقييم وظائف الكبد والفحوصات السابقة.</li>
-      <li>نصائح غذائية لتقليل الدهون والكوليسترول.</li>
-      <li>متابعة الدهون الثلاثية والإنزيمات الدهنية في الدم.</li>
-      <li>تعليمات حول المكملات الطبيعية أو العلاج الغذائي لدعم الكبد.</li>
-    </ul>
-  `,
-  "لياقة": `
-    <h3>لياقة / تحسين الأداء الرياضي</h3>
-    <ul>
-      <li>تقييم مستوى اللياقة البدنية الحالي.</li>
-      <li>نظام غذائي يدعم الطاقة وبناء العضلات.</li>
-      <li>توجيهات عن البروتين والكربوهيدرات قبل وبعد التمرين.</li>
-      <li>نصائح للترطيب الصحيح والتعافي بعد التمرين.</li>
-    </ul>
-  `,
-  "سكر": `
-    <h3>سكر / تنظيم مستوى الجلوكوز</h3>
-    <ul>
-      <li>متابعة مستويات السكر وصحة البنكرياس.</li>
-      <li>نظام غذائي منخفض المؤشر الجلايسيمي.</li>
-      <li>تقسيم الوجبات خلال اليوم مع التحكم بالسكر في الدم.</li>
-      <li>نصائح رياضية خفيفة وآمنة لمرضى السكري.</li>
-    </ul>
-  `
+  "تخسيس": "<h3>تخسيس / إنقاص وزن</h3><ul><li>تحليل الوزن الحالي ونسبة الدهون في الجسم.</li><li>حساب السعرات الحرارية المطلوبة يوميًا.</li><li>وضع خطة غذائية مفصلة بالأيام والوجبات.</li><li>متابعة أسبوعية للوزن والقياسات وتعديل النظام إذا لزم.</li><li>نصائح رياضية وخطوات لتحسين النشاط البدني.</li></ul>",
+  "كبد": "<h3>كبد / صحة الكبد</h3><ul><li>تقييم وظائف الكبد والفحوصات السابقة.</li><li>نصائح غذائية لتقليل الدهون والكوليسترول.</li><li>متابعة الدهون الثلاثية والإنزيمات الدهنية في الدم.</li><li>تعليمات حول المكملات الطبيعية أو العلاج الغذائي لدعم الكبد.</li></ul>",
+  "لياقة": "<h3>لياقة / تحسين الأداء الرياضي</h3><ul><li>تقييم مستوى اللياقة البدنية الحالي.</li><li>نظام غذائي يدعم الطاقة وبناء العضلات.</li><li>توجيهات عن البروتين والكربوهيدرات قبل وبعد التمرين.</li><li>نصائح للترطيب الصحيح والتعافي بعد التمرين.</li></ul>",
+  "سكر": "<h3>سكر / تنظيم مستوى الجلوكوز</h3><ul><li>متابعة مستويات السكر وصحة البنكرياس.</li><li>نظام غذائي منخفض المؤشر الجلايسيمي.</li><li>تقسيم الوجبات خلال اليوم مع التحكم بالسكر في الدم.</li><li>نصائح رياضية خفيفة وآمنة لمرضى السكري.</li></ul>"
 };
 
 document.querySelectorAll('.service-btn').forEach(btn => {
@@ -199,35 +89,27 @@ const msgEl = document.getElementById("message");
 form.addEventListener("submit", e => {
   e.preventDefault();
 
-  const contactInput = document.getElementById("contact").value.trim();
-  if(!/^\d+$/.test(contactInput)) {
+  const name = document.getElementById("name").value.trim();
+  const contact = document.getElementById("contact").value.trim();
+  const condition = document.getElementById("condition").value;
+
+  if(!/^\d+$/.test(contact)) {
     msgEl.textContent = "❌ رقم التواصل يجب أن يكون أرقام فقط";
     return;
   }
 
-  const data = {
-    name: document.getElementById("name").value.trim(),
-    contact: contactInput,
-    condition: document.getElementById("condition").value
-  };
+  const data = {name, contact, condition};
 
-  fetch(SERVER_URL, {
-    method: "POST",
-    body: JSON.stringify(data)
-  })
-  .then(res => res.json())
-  .then(resp => {
-    if(resp.status === "ok") {
-      form.reset();
-      msgEl.textContent = "✅ تم التأكيد الحجز العياده سوف تتواصل معك";
-    } else if(resp.status === "duplicate") {
-      msgEl.textContent = "❌ هذا الرقم تم تسجيله بالفعل اليوم";
-    }
-  })
-  .catch(err => {
-    console.error(err);
-    msgEl.textContent = "❌ خطأ في الاتصال بالسيرفر — تحقق من نشر Web App";
-  });
+  fetch(SERVER_URL, { method:"POST", body:JSON.stringify(data) })
+    .then(res => res.json())
+    .then(resp => {
+        msgEl.textContent = resp.message || "تم الإرسال";
+        if(resp.status === "ok" || resp.status === "duplicate") form.reset();
+    })
+    .catch(err => {
+        console.error(err);
+        msgEl.textContent = "❌ خطأ في الاتصال بالسيرفر — تحقق من نشر Web App";
+    });
 });
 </script>
 
